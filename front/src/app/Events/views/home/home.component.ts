@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
   ngOnInit(): void {
-    this.readtournament();
+  /*   this.readtournament(); */
 }
 
 listtournament1: any[] = []; 
 
 constructor( private http: HttpClient, private router: Router){}
 
-readtournament(){
+/* readtournament(){
 
   this.http.get<any[]>('http://localhost:8000/eventgames')
   .subscribe(listtournament => 
@@ -26,6 +26,6 @@ readtournament(){
     });
 
 
-}
+} */
 
 }
