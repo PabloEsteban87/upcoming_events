@@ -1,7 +1,7 @@
 <div class="row">
-<div class="col-12 container-h1-1">
-    <h1 class="h1-1">Featured &nbsp;&nbsp;&nbsp;Tournaments</h1>
-</div>
+    <div class="col-12 container-h1-1">
+        <h1 class="h1-1">Featured &nbsp;&nbsp;&nbsp;Tournaments</h1>
+    </div>
 </div>
 <div class="container-slider"></div>
 <div class="col-12 container-h1-1">
@@ -9,7 +9,8 @@
 </div>
 
 <div class="container-next-tournaments">
-    <p *ngFor="let listtournament1 of listtournament1" class="list1"><strong>{{listtournament1.publicationevent | date: 'dd-MM-yyyy'}}{{listtournament1.title}}&nbsp;&nbsp;&nbsp;</strong></p>
+    <p *ngFor="let listtournament1 of listtournament1" class="list1"><strong>{{listtournament1.publicationevent | date:
+            'dd-MM-yyyy'}}{{listtournament1.title}}&nbsp;&nbsp;&nbsp;</strong></p>
 </div>
 
 <div class="col-12 container-h1-2">
