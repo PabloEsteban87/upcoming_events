@@ -4,6 +4,7 @@ package com.f5Events.gametour.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.f5Events.gametour.models.User1;
@@ -20,10 +21,17 @@ public class UserService {
         this.repository = repository;
     }
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
        public User1 create(User1 user){
-        User1 userSaved = repository.save(user);
-        return userSaved;
+        user.setName(user.getName());
+        String password = user.getPassword();
+        user.setPassword(passwordEncoder.encode(password));
+        return repository.save(user); 
     }
+
+ 
 
     public User1 findById(Long id) {
         User1 users =  repository.findById(id).orElseThrow();

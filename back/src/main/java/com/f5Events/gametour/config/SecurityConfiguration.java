@@ -45,7 +45,7 @@ public class SecurityConfiguration {
                                 .authorizeHttpRequests(auth -> auth
                                                 .requestMatchers("/eventgames/**").permitAll()
                                                 .requestMatchers("/games/**").permitAll()
-                                                .requestMatchers("/user/**").permitAll()
+                                                .requestMatchers("/user/**").hasRole("ADMIN")
                                                 .anyRequest().authenticated())
                                 .httpBasic(withDefaults())
                                 .sessionManagement(session -> session
@@ -77,7 +77,7 @@ public class SecurityConfiguration {
                 UserDetails admin = User.builder()
                                 .username("admin")
                                 .password("1234")
-                                .roles("USER", "ADMIN")
+                                .roles("ADMIN")
                                 .build();
 
                 return new InMemoryUserDetailsManager(user, admin);

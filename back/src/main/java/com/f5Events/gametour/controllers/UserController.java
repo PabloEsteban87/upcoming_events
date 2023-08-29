@@ -29,7 +29,7 @@ public class UserController {
         this.service = service;
     }
 
-     @PostMapping
+    @PostMapping
     public ResponseEntity<User1> create(@RequestBody User1 user){
         User1 serviceSaved = service.create(user);
         return ResponseEntity.status(HttpStatus.OK).body(serviceSaved);
@@ -41,7 +41,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(findbyid);
     }
 
-    @PutMapping(path = "/{id}")
+    @PutMapping(path = {"/{id}"})
     public ResponseEntity<User1> update(@PathVariable("id") Long id, @RequestBody User1 user1, @RequestBody User1 newuser){
         User1 serviceupdated = service.update(id, user1, newuser);
         return ResponseEntity.status(HttpStatus.OK).body(serviceupdated);

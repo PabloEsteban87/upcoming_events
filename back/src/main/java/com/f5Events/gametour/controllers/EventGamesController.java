@@ -43,9 +43,9 @@ public class EventGamesController {
         return ResponseEntity.status(HttpStatus.OK).body(findbyid);
     }
 
-    @PutMapping(path = "/{id}")
+    @PutMapping(path = {"/{id}"})
     public ResponseEntity<EventGames> update(@PathVariable("id") Long id, @RequestBody EventGames eventGames1, @RequestBody EventGames neweventGames){
-        EventGames serviceupdated = service.update(id, eventGames1, neweventGames);
+        EventGames serviceupdated = service.update(id, neweventGames);
         return ResponseEntity.status(HttpStatus.OK).body(serviceupdated);
     }
 
