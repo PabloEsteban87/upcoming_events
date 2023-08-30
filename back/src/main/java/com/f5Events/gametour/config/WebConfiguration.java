@@ -1,4 +1,4 @@
- package com.f5Events.gametour.config;
+/*  package com.f5Events.gametour.config;
 
 
 @Configuration
@@ -8,7 +8,6 @@ public class WebConfiguration implements WebMvcConfigurer{
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**");
     }
-} */
+}  */
 
 
-  */
