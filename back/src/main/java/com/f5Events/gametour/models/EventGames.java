@@ -1,5 +1,6 @@
 package com.f5Events.gametour.models;
 
+import java.sql.Blob;
 import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -16,9 +17,6 @@ public class EventGames {
     private String title;
     @Column(name = "publicationevent")
 
-
-   
-
     private Date publicationevent;
     @Column(name = "participants")
     private Integer participants;
@@ -29,7 +27,7 @@ public class EventGames {
     @Column(name = "description")
     private String description;
     @Column(name = "image")
-    private String image;
+    private Blob image;
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "id_game", unique=false, nullable=true, insertable=true, updatable=true)
@@ -80,10 +78,10 @@ public class EventGames {
     public void setDescription(String description) {
         this.description = description;
     }
-    public String getImage() {
+    public Blob getImage() {
         return image;
     }
-    public void setImage(String image) {
+    public void setImage(Blob image) {
         this.image = image;
     }
       public Integer getLimitparticipants() {
