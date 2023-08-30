@@ -8,6 +8,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -44,6 +45,8 @@ public class SecurityConfiguration {
                                                 .deleteCookies("JSESSIONID"))
                                 .authorizeHttpRequests(auth -> auth
                                                 .requestMatchers("/eventgames/**").permitAll()
+                                                .requestMatchers(HttpMethod.PUT).permitAll()
+                                                .requestMatchers(HttpMethod.POST).permitAll()
                                                 .requestMatchers("/games/**").permitAll()
                                                 .requestMatchers("/user/**").hasRole("ADMIN")
                                                 .anyRequest().authenticated())

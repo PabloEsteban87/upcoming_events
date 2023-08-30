@@ -27,7 +27,7 @@ public class EventGames {
     @Column(name = "description")
     private String description;
     @Column(name = "image")
-    private Blob image;
+    private String image;
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "id_game", unique=false, nullable=true, insertable=true, updatable=true)
@@ -78,10 +78,10 @@ public class EventGames {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Blob getImage() {
+    public String getImage() {
         return image;
     }
-    public void setImage(Blob image) {
+    public void setImage(String image) {
         this.image = image;
     }
       public Integer getLimitparticipants() {

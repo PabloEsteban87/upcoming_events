@@ -24,7 +24,7 @@ INSERT INTO games (name, abbreviation) VALUES
 
 
 INSERT INTO eventgames  (title, publicationevent, participants, limitparticipants, description, image, id_game, id_user) VALUES
-('COD tournament', '2023-08-01', 0, 100, 'Torneo abierto de Call of Duty. Este torneo será eliminatorio y se realizará por equipos de cinco personas. El limite de participantes es de 100 jugadores. La fecha de inscripción se deberá realizar unos cinco días antes.', null, 1, 1),
+('COD tournament', '2023-08-01', 0, 100, 'Torneo abierto de Call of Duty. Este torneo será eliminatorio y se realizará por equipos de cinco personas. El limite de participantes es de 100 jugadores. La fecha de inscripción se deberá realizar unos cinco días antes.', 'callofduty.jpg', 1, 1),
 ('COD tournament 2', '2023-09-26', 0, 150, 'Torneo cerrado de Call of Duty. Este torneo será eliminatorio y se realizará por equipos de diez personas. El limite de participantes es de 150 jugadores. La fecha de inscripción se deberá realizar unos cinco días antes.', null, 1, 2),
 ('LOL tournament', '2023-12-09', 0, 50, 'Torneo abierto de League of legends. Este torneo será eliminatorio y se realizará por equipos de cinco personas. El limite de participantes es de 50 jugadores. La fecha de inscripción se deberá realizar unos siete días antes.', null, 5, 3),
 ('DOTA 2 tournament', '2023-05-18', 0, 110, 'Torneo abierto de DOTA 2. Este torneo será eliminatorio y se realizará por equipos de diez personas. El limite de participantes es de 110 jugadores. La fecha de inscripción se deberá realizar unos cinco días antes.',null, 6, 4),
