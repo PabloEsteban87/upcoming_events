@@ -43,7 +43,7 @@ import { EditEventComponent } from './Events/components/edit-event/edit-event.co
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatPaginatorModule
+     MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
