@@ -13,7 +13,7 @@ import { PageregisterComponent } from './Events/components/pageregister/pageregi
 import { UpcomingEventsComponent } from '../app/Events/components/upcoming-events/upcoming-events.component';
 import { SliderComponent } from './Events/components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatPaginatorModule } from '@angular/material/paginator';
+/* import { MatPaginatorModule } from '@angular/material/paginator'; */
 import { EventDetailComponent } from './events/components/event-detail/event-detail.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { EditEventComponent } from './Events/components/edit-event/edit-event.component';
@@ -43,7 +43,7 @@ import { EditEventComponent } from './Events/components/edit-event/edit-event.co
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-     MatPaginatorModule
+/*      MatPaginatorModule */
   ],
   providers: [],
   bootstrap: [AppComponent]
