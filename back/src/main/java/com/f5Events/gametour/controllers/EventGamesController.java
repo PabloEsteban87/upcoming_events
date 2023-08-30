@@ -44,7 +44,7 @@ public class EventGamesController {
     }
 
     @PutMapping(path = {"/{id}"})
-    public ResponseEntity<EventGames> update(@PathVariable("id") Long id, @RequestBody EventGames eventGames1, @RequestBody EventGames neweventGames){
+    public ResponseEntity<EventGames> update(@PathVariable("id") Long id,  @RequestBody EventGames neweventGames){
         EventGames serviceupdated = service.update(id, neweventGames);
         return ResponseEntity.status(HttpStatus.OK).body(serviceupdated);
     }
